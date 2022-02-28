@@ -1,5 +1,6 @@
 import math
 
+#needs a fix for reccuring fractions
 
 def clear_screen():
     for i in range(d(114)):
