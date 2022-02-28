@@ -24,4 +24,3 @@ def digitalclock():
 
 digitalclock()
 canvas.mainloop()
-print('beasn')
