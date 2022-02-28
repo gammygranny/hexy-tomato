@@ -1,16 +1,15 @@
 from heximal import *
 import time
-import tkinter as tk
-import time
 
 from tkinter import *
 
 canvas = Tk()
 canvas.title("Digital Clock")
 canvas.geometry("350x200")
-canvas.resizable(1, 1)
-label = Label(canvas, font=("Courier", 30, 'bold'), bg="blue", fg="white", bd=30)
-label.grid(row=0, column=1)
+canvas.resizable(2, 2)
+label = Label(canvas, font=("Verdana", d(20), 'bold'), bg="blue", fg="white", bd=d(20))
+label.grid(row=2, column=2)
+pom = Label(canvas, font=("Verdana", d(40), 'bold'), bg="blue", fg="white", bd=d(40))
 
 def hextime():
     truetime = str(int(h(time.time() * (d(43) / d(122))) % 1000000))
@@ -25,14 +24,4 @@ def digitalclock():
 
 digitalclock()
 canvas.mainloop()
-
-
-i = lasttime = 0
-while i < d(50):
-    truetime = str(int(h(time.time() * (d(43) / d(122))) % 1000000))
-    if lasttime != truetime:
-        clear_screen()
-        print(int(h(time.time() * (d(43) / d(122)))))
-        print(truetime[0:2], ':', truetime[2:4], ':', truetime[4:d(10)])
-        lasttime = truetime
-        i += 1
+print('beasn')
